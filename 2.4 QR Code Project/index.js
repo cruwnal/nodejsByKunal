@@ -6,7 +6,11 @@ inquirer
 .prompt([
     {message: "Type in your URL: ",
         name: "URL",
-     },
+     
+    
+    }
+     
+     ,
      
    
 ]) 
@@ -14,6 +18,7 @@ inquirer
 .then((answers)=>{
 
 const url = answers.URL;
+console.log(answers);
 var qr_svg = qr.image(url);
 qr_svg.pipe(fs.createWriteStream('qr_code.png'));
 
