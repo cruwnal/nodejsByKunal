@@ -18,7 +18,21 @@ app.get("/address",(req,res)=>{
     res.send("bengaluru");
 });
 
+app.post("/register",(req,res)=>{
+    res.sendStatus(201);
 
+});
+
+app.put("/user/kunal",(req,res)=>{
+    res.sendStatus(200);
+});
+app.patch("/user/kunal",(req,res)=>{
+    res.sendStatus(200);
+});
+
+app.delete("/user/kunal",(req,res)=>{
+    res.sendStatus(200);
+})
 app.listen(port,()=>{
     console.log(`server started with port ${port}`);
 });
